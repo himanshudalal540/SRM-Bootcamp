@@ -1,0 +1,14 @@
+Day 2 P5:
+Count binary strings with no consecutive one:
+class Main {
+    public static int countBinaryString(int n){
+        if(n==0) return 0;
+        if(n==1) return 1;
+        if(n==2) return 2;
+        return countBinaryString(n-1)+countBinaryString(n-2);
+    }
+    public static void main(String[] args) {
+        int n=5;
+        System.out.println("Length "+n+" with no consecutive one "+countBinaryString(n) );
+    }
+}
