@@ -1,0 +1,18 @@
+Day 2:
+Problem6: Tile Problem:
+
+class Main {
+    static long ways(int n){
+        if(n==0) return 1;
+        if(n<0) return 0;
+        return ways(n-1)+ways(n-4);
+    }
+    
+    public static void main(String[] args) {
+        int n=5;
+        if(n<=0){
+            System.out.println("0");
+        }
+        System.out.println(ways(n));
+    }
+}
