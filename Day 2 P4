@@ -1,0 +1,19 @@
+Day 2
+Problen4:Maximum Substrings With Distinct Start:
+class Solution {
+    public int maxDistinct(String s) {
+        int[] freq=new int [26];
+        int count=0;
+        for(char c: s.toCharArray()){
+            if (freq[c-'a']==0){
+                count++;
+                freq[c-'a']=1;
+
+
+            }
+
+        }
+        return count;
+
+    }
+}
