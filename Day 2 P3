@@ -1,0 +1,19 @@
+Day 2:
+Problem3: Valid Anagram:
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        HashMap<Character,Integer>hash=new HashMap<>();
+        for(char ch : s.toCharArray()){
+            hash.put(ch,hash.getOrDefault(ch,0)+1);
+        }
+        for(char ch : t.toCharArray()){
+            hash.put(ch,hash.getOrDefault(ch,0)-1);
+        }
+        for(int count : hash.values()){
+            if(count!=0){
+                return false;
+            }
+        }
+        return true;
+    }
+}
